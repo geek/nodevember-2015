@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/geek/nodevember-2015/issues"
   },
-  "homepage": "https://github.com/geek/nodevember-2015#readme"
+  "homepage": "https://github.com/geek/nodevember-2015#readme",
+  "dependencies": {
+    "boom": "3.x.x",
+    "chairo": "1.x.x",
+    "hapi": "11.x.x",
+    "hoek": "3.x.x",
+    "joi": "7.x.x",
+    "seneca": "0.x.x"
+  }
 }
