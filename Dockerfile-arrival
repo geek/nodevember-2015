@@ -1,0 +1,10 @@
+FROM node
+
+RUN mkdir -p /app
+WORKDIR /app
+COPY package.json package.json
+COPY arrival_time.js arrival_time.js
+COPY arrival_open_routeV2.js arrival_open_routeV2.js
+COPY step9_arrivalServer.js step9_arrivalServer.js
+
+RUN npm install

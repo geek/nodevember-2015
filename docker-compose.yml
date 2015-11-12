@@ -1,0 +1,14 @@
+isopen:
+  build: .
+  dockerfile: Dockerfile-isopen
+  expose:
+    - "8000"
+  entrypoint: node /app/step9_isOpenServer.js
+arrival:
+  build: .
+  dockerfile: Dockerfile-arrival
+  links:
+   - isopen
+  ports:
+    - "8080:8080"
+  entrypoint: node /app/step9_arrivalServer.js

@@ -6,7 +6,6 @@ const Joi = require('joi')
 
 module.exports = function (server, options, next) {
 
-  server.dependency('isOpen')
   server.dependency('arrivalTime')
   server.route({
     method: 'get',
@@ -23,7 +22,7 @@ module.exports = function (server, options, next) {
             return reply(Boom.internal(err))
           }
 
-          request.seneca.act({ role: 'isOpen', time: arrival.time}, (err, message) => {
+          request.seneca.client({ host: 'isopen', port: 8000 }).act({ role: 'isOpen', time: arrival.time}, (err, message) => {
             if (err) {
               return reply(Boom.internal(err))
             }
@@ -46,5 +45,5 @@ module.exports = function (server, options, next) {
 
 module.exports.attributes = {
   name: 'arrivalOpenRoute',
-  version: '1.0.0'
+  version: '2.0.0'
 }
