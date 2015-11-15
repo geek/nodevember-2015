@@ -2,7 +2,7 @@
   "name": "nodevember-2015",
   "version": "1.0.0",
   "description": "Code for nodevember 2015 presentation",
-  "main": "index.js",
+  "main": "step8.js",
   "scripts": {
     "test": "lab"
   },
